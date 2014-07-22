@@ -27,7 +27,7 @@ For all informaton on this plugin and Tiqbiz, please see http://www.tiqbiz.com/
 
 == Screenshots ==
 
-1. An example of the notice show while syncing
+1. An example of the notice shown while syncing
 2. The Tiqbiz API Options page
 
 == Changelog ==
