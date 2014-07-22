@@ -14,22 +14,22 @@ class Api
 
     public function __construct()
     {
-        $options = get_option('tiqbiz_api_options');
+        $settings = get_option('tiqbiz_api_settings');
 
-        if (isset($options['cid'])) {
-            $this->cid = $options['cid'];
+        if (isset($settings['cid'])) {
+            $this->cid = $settings['cid'];
         }
 
-        if (isset($options['api_key'])) {
-            $this->api_key = $options['api_key'];
+        if (isset($settings['api_key'])) {
+            $this->api_key = $settings['api_key'];
         }
 
-        if (isset($options['boxes'])) {
-            $this->boxes = $options['boxes'];
+        if (isset($settings['boxes'])) {
+            $this->boxes = $settings['boxes'];
         }
 
-        if (isset($options['timeout'])) {
-            $this->timeout = $options['timeout'];
+        if (isset($settings['timeout'])) {
+            $this->timeout = $settings['timeout'];
         }
     }
 

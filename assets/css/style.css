@@ -2,34 +2,34 @@
     color: #bbb;
 }
 
-#tiqbiz_api_options #cid {
+#tiqbiz_api_settings #cid {
     width: 100px;
 }
 
-#tiqbiz_api_options #api_key {
+#tiqbiz_api_settings #api_key {
     width: 350px;
 }
 
-#tiqbiz_api_options #boxes {
+#tiqbiz_api_settings #boxes {
     margin: 5px;
     list-style: disc inside;
 }
 
-#tiqbiz_api_options #timeout {
+#tiqbiz_api_settings #timeout {
     width: 50px;
 }
 
-#tiqbiz_api_options dl {
+#tiqbiz_api_settings dl {
     float: left;
     width: 200px;
 }
 
-#tiqbiz_api_options dt {
+#tiqbiz_api_settings dt {
     width: 130px;
 }
 
-#tiqbiz_api_options dt,
-#tiqbiz_api_options dd {
+#tiqbiz_api_settings dt,
+#tiqbiz_api_settings dd {
     float: left;
 }
 

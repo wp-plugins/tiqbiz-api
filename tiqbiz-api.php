@@ -31,9 +31,9 @@ spl_autoload_register(function($class) {
 use Tiqbiz\Api\Assets;
 use Tiqbiz\Api\Posts;
 use Tiqbiz\Api\Events;
-use Tiqbiz\Api\Options;
+use Tiqbiz\Api\Settings;
 
 new Assets();
 new Posts();
 new Events();
-new Options();
+new Settings();
