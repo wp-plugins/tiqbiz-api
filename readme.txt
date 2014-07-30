@@ -38,6 +38,11 @@ Initial release
 = 1.0.1 =
 Change 'Options' to 'Settings'
 
+= 1.0.2 =
+Better timezone handling for event times
+PHP 5.3 compatibility
+Add PHP version to to settings page
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -45,3 +50,6 @@ Initial release
 
 = 1.0.1 =
 Minor update
+
+= 1.0.2 =
+Minor update to handle timezones better, and support older versions of PHP
