@@ -32,11 +32,19 @@ For all informaton on this plugin and Tiqbiz, please see http://www.tiqbiz.com/
 
 == Changelog ==
 
-= 1.0 =
-Initial release
+= 1.0.3 =
+Support for CalPress Pro
+
+= 1.0.2 =
+* Better timezone handling for event times
+* PHP 5.3 compatibility
+* Add PHP version to to settings page
 
 = 1.0.1 =
 Change 'Options' to 'Settings'
+
+= 1.0 =
+Initial release
 
 == Upgrade Notice ==
 
@@ -45,3 +53,9 @@ Initial release
 
 = 1.0.1 =
 Minor update
+
+= 1.0.2 =
+Minor update to handle timezones better, and support older versions of PHP
+
+= 1.0.3 =
+Minor update to support CalPress Pro

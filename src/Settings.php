@@ -58,6 +58,10 @@ class Settings extends Api
                     <dd><?php echo $this->getPluginVersion(); ?></dd>
                     <dt>CalPress Version</dt>
                     <dd><?php echo $this->getPluginVersion(TIQBIZ_API_EVENT_PLUGIN); ?></dd>
+                    <dt>CalPress Pro Version</dt>
+                    <dd><?php echo $this->getPluginVersion(TIQBIZ_API_EVENT_PLUGIN_PRO); ?></dd>
+                    <dt>PHP Version</dt>
+                    <dd><?php echo phpversion(); ?></dd>
                 </dl>
             </form>
         </div>
