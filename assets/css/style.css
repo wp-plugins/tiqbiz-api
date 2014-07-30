@@ -21,16 +21,17 @@
 
 #tiqbiz_api_settings dl {
     float: left;
-    width: 200px;
+    width: 250px;
 }
 
 #tiqbiz_api_settings dt {
-    width: 130px;
+    width: 150px;
 }
 
 #tiqbiz_api_settings dt,
 #tiqbiz_api_settings dd {
     float: left;
+    margin-left: 0;
 }
 
 #tiqbiz_api_sync_progress {
