@@ -162,13 +162,13 @@ class Events extends Sync
 
     private function formatDate($time)
     {
-        $current_timezone = date_default_timezone_get();
+        $wp_timezone = get_option('timezone_string');
 
-        date_default_timezone_set('Australia/Melbourne');
+        if ($wp_timezone) {
+            date_default_timezone_set($wp_timezone);
+        }
 
         $date = date('Y-m-d\TH:i', $time);
-
-        date_default_timezone_set($current_timezone);
 
         return $date;
     }
