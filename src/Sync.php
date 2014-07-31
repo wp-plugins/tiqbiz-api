@@ -198,6 +198,19 @@ class Sync extends Api
         );
     }
 
+    protected function formatDateFromTime($time)
+    {
+        $wp_timezone = get_option('timezone_string');
+
+        if ($wp_timezone) {
+            date_default_timezone_set($wp_timezone);
+        }
+
+        $date = date('Y-m-d\TH:i', $time);
+
+        return $date;
+    }
+
     private function getActions()
     {
         if (

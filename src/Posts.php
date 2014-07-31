@@ -55,9 +55,13 @@ class Posts extends Sync
 
         $boxes = $this->getPostBoxes($post_id);
 
-        if ($post->post_status == 'publish' && $boxes) {
+        if ($boxes && in_array($post->post_status, array('publish', 'future'))) {
             $post_data['content'] = wpautop($post->post_content);
             $post_data['boxes'] = $boxes;
+
+            if ($post->post_status == 'future') {
+                $post_data['post_date'] = $this->formatDateFromTime(get_post_time('U', true, $post));
+            }
 
             $this->queueAction($post_id, 'createPost', $post_data);
         } else if ($tiqbiz_api_id) {
