@@ -108,8 +108,8 @@ class Events extends Sync
             $event_data['content'] = wpautop($event->post->post_content);
             $event_data['boxes'] = $boxes;
 
-            $event_data['start'] = $this->formatDate($event->start);
-            $event_data['end'] = $this->formatDate($event->end);
+            $event_data['start'] = $this->formatDateFromTime($event->start);
+            $event_data['end'] = $this->formatDateFromTime($event->end);
 
             $event_data['all_day'] = (bool)$event->allday;
 
@@ -158,19 +158,6 @@ class Events extends Sync
         }
 
         return (bool)get_post_meta($post_id, '_tiqbiz_api_send_notification', true);
-    }
-
-    private function formatDate($time)
-    {
-        $wp_timezone = get_option('timezone_string');
-
-        if ($wp_timezone) {
-            date_default_timezone_set($wp_timezone);
-        }
-
-        $date = date('Y-m-d\TH:i', $time);
-
-        return $date;
     }
 
 }
