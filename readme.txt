@@ -32,6 +32,9 @@ For all informaton on this plugin and Tiqbiz, please see http://www.tiqbiz.com/
 
 == Changelog ==
 
+= 1.0.4 =
+Support syncing future posts
+
 = 1.0.3 =
 Support for CalPress Pro
 
@@ -59,3 +62,6 @@ Minor update to handle timezones better, and support older versions of PHP
 
 = 1.0.3 =
 Minor update to support CalPress Pro
+
+= 1.0.4 =
+Minor update to support syncing future posts
