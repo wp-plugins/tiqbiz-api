@@ -32,6 +32,9 @@ For all informaton on this plugin and Tiqbiz, please see http://www.tiqbiz.com/
 
 == Changelog ==
 
+= 1.0.5 =
+Fix for single day all day events
+
 = 1.0.4 =
 Support syncing future posts
 
@@ -65,3 +68,6 @@ Minor update to support CalPress Pro
 
 = 1.0.4 =
 Minor update to support syncing future posts
+
+= 1.0.5 =
+Minor update to fix an issue with single day all day events
