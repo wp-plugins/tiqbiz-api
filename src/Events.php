@@ -109,7 +109,7 @@ class Events extends Sync
             $event_data['boxes'] = $boxes;
 
             $event_data['start'] = $this->formatDateFromTime($event->start);
-            $event_data['end'] = $this->formatDateFromTime($event->end);
+            $event_data['end'] = $event->allday ? $event_data['start'] : $this->formatDateFromTime($event->end);
 
             $event_data['all_day'] = (bool)$event->allday;
 
