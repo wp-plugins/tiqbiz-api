@@ -2,7 +2,7 @@
 Contributors: tiqbiz
 Tags: api, admin
 Requires at least: 3.7
-Tested up to: 3.9
+Tested up to: 4.1
 Stable tag: trunk
 License: CC BY-SA 4.0
 License URI: https://creativecommons.org/licenses/by-sa/4.0/legalcode
