@@ -105,7 +105,7 @@ class Events extends Sync
         $send_notification = $this->getPostSendNotificationStatus($event_id);
 
         if ($event->post->post_status == 'publish' && $boxes) {
-            $event_data['content'] = wpautop($event->post->post_content);
+            $event_data['content'] = apply_filters('the_content', $event->post->post_content);
             $event_data['boxes'] = $boxes;
 
             $event_data['start'] = $this->formatDateFromTime($event->start);

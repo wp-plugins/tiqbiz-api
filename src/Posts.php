@@ -56,7 +56,7 @@ class Posts extends Sync
         $boxes = $this->getPostBoxes($post_id);
 
         if ($boxes && in_array($post->post_status, array('publish', 'future'))) {
-            $post_data['content'] = wpautop($post->post_content);
+            $post_data['content'] = apply_filters('the_content', $post->post_content);
             $post_data['boxes'] = $boxes;
 
             if ($post->post_status == 'future') {
