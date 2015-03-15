@@ -154,7 +154,7 @@
             tiqbiz_api.logAppend(log_item, message.replace(/\.$/, ''), 'error');
         }
 
-        this.logSuccess = function logError(log_item) {
+        this.logSuccess = function logSuccess(log_item) {
             tiqbiz_api.logAppend(log_item, 'OK', 'success');
         }
 
