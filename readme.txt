@@ -32,6 +32,9 @@ For all informaton on this plugin and Tiqbiz, please see http://www.tiqbiz.com/
 
 == Changelog ==
 
+= 1.0.8 =
+Resolved an issue where some special characters were not displaying properly
+
 = 1.0.7 =
 Sync via plugin rather than AJAX directly
 
@@ -83,3 +86,6 @@ Minor update to fix an issue with unusual characters in post/event content, and 
 
 = 1.0.7 =
 Update to fix an issue with posts that have lots of content not syncing due to URL length limits
+
+= 1.0.7 =
+Update to fix an issue where some special characters were not displaying properly

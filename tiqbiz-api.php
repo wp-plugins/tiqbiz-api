@@ -4,7 +4,7 @@
  * Plugin Name: Tiqbiz API
  * Plugin URI: http://www.tiqbiz.com/
  * Description: Integrates your WordPress site with the Tiqbiz API
- * Version: 1.0.7
+ * Version: 1.0.8
  * Author: Tiqbiz
  * Author URI: http://www.tiqbiz.com/
  * License: CC BY-SA 4.0
