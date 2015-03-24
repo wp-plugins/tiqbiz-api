@@ -87,5 +87,5 @@ Minor update to fix an issue with unusual characters in post/event content, and 
 = 1.0.7 =
 Update to fix an issue with posts that have lots of content not syncing due to URL length limits
 
-= 1.0.7 =
+= 1.0.8 =
 Update to fix an issue where some special characters were not displaying properly
