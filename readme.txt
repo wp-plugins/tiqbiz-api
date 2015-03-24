@@ -32,6 +32,9 @@ For all informaton on this plugin and Tiqbiz, please see http://www.tiqbiz.com/
 
 == Changelog ==
 
+= 1.0.7 =
+Sync via plugin rather than AJAX directly
+
 = 1.0.6 =
 Better handling of post/event content
 
@@ -77,3 +80,6 @@ Minor update to fix an issue with single day all day events
 
 = 1.0.6 =
 Minor update to fix an issue with unusual characters in post/event content, and to add support for shortcodes
+
+= 1.0.7 =
+Update to fix an issue with posts that have lots of content not syncing due to URL length limits
