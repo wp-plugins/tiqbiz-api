@@ -26,7 +26,8 @@ define('TIQBIZ_API_EVENT_CLASS', '\Calp_Event');
 
 spl_autoload_register(function($class) {
     if (strpos($class, 'Tiqbiz\Api') === 0) {
-        require_once plugin_dir_path(TIQBIZ_API_PLUGIN_PATH) . 'src/' . array_pop(explode('\\', $class)) . '.php';
+        $class_segments = explode('\\', $class);
+        require_once plugin_dir_path(TIQBIZ_API_PLUGIN_PATH) . 'src/' . array_pop($class_segments) . '.php';
     }
 });
 
