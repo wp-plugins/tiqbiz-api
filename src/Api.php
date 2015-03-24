@@ -83,12 +83,12 @@ class Api
         return $plugin_details['Version'];
     }
 
-    private function apiAction($method, $payload = '')
+    protected function apiAction($method, $payload = '', $raw_response = false)
     {
         $post_fields = array(
             'cid'      => $this->cid,
             'auth_key' => $this->api_key,
-            $method    => $payload
+            $method    => json_encode($payload, JSON_NUMERIC_CHECK)
         );
 
         $post_query = http_build_query($post_fields);
@@ -109,6 +109,10 @@ class Api
         }
 
         curl_close($ch);
+
+        if ($raw_response) {
+            return $response;
+        }
 
         $results = json_decode($response);
 

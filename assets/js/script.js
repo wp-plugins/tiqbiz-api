@@ -10,11 +10,7 @@
             return;
         }
 
-        var endpoint = tiqbiz_api_data.endpoint;
         var timeout = tiqbiz_api_data.timeout;
-
-        var cid = tiqbiz_api_data.cid;
-        var api_key = tiqbiz_api_data.api_key;
 
         var sync_banner = $('#tiqbiz_api_sync_progress').removeClass('updated');
         var success_banner = $('#tiqbiz_api_sync_success')
@@ -60,16 +56,17 @@
             payload = payload || '';
 
             var data = {};
-            data.cid = cid;
-            data.auth_key = api_key;
-            data[method] = JSON.stringify(payload);
+            data.action = 'tiqbiz_api_action';
+            data.method = method;
+            data.payload = payload;
 
             var log_item = tiqbiz_api.log('Syncing post "' + payload.title + '"...');
 
             return $.Deferred(function(deferred) {
                 $.ajax({
-                    url: endpoint,
-                    dataType: 'jsonp',
+                    url: ajaxurl,
+                    type: 'post',
+                    dataType: 'json',
                     data: data,
                     timeout: timeout * 1000,
 

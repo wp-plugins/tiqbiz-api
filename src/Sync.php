@@ -14,6 +14,8 @@ class Sync extends Api
         add_action('wp_logout', array($this, 'sessionDestroy'));
 
         add_action('admin_notices', array($this, 'runActions'));
+
+        add_action('wp_ajax_tiqbiz_api_action', array($this, 'actionProxy'));
         add_action('wp_ajax_tiqbiz_api_id_callback', array($this, 'updatePostTiqbizId'));
     }
 
@@ -76,10 +78,7 @@ class Sync extends Api
         }
 
         wp_localize_script('tiqbiz-api-script', 'tiqbiz_api_data', array(
-            'endpoint' => $this->endpoint,
             'timeout' => $this->timeout,
-            'cid' => $this->cid,
-            'api_key' => $this->api_key,
             'action_queue' => array_values($actions)
         ));
 
@@ -100,12 +99,34 @@ class Sync extends Api
         <div class="update-nag updated" id="tiqbiz_api_sync_success">
             <p>All updates successfully synced with Tiqbiz.</p>
         </div>
+
         <?php
+    }
+
+    public function actionProxy()
+    {
+        $method = isset($_REQUEST['method']) ? $_REQUEST['method'] : '';
+        $payload = isset($_REQUEST['payload']) ? $_REQUEST['payload'] : '';
+
+        try {
+            $response = $this->apiAction($method, $payload, true);
+        } catch (\Exception $e) {
+            $response = json_encode(array(
+                'success' => false,
+                'error_message' => $e->getMessage()
+            ));
+        }
+
+        $this->jsonHeader();
+
+        exit($response);
     }
 
     public function updatePostTiqbizId()
     {
         $return = function($success, $error_message = '') {
+            $this->jsonHeader();
+
             exit(json_encode(array(
                 'success' => $success,
                 'error_message' => $error_message
@@ -225,6 +246,11 @@ class Sync extends Api
         } else {
             return array();
         }
+    }
+
+    private function jsonHeader()
+    {
+        header('Content-Type: application/json');
     }
 
 }
